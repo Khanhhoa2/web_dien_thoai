@@ -49,7 +49,7 @@
                     <tbody>  
                     <?php
                          require '../inc/myconnect.php';
-                         $sql="SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.Mota, n.Ten as Tennhasx
+                         $sql="SELECT s.ID,s.Ten,s.ngay,s.Gia,s.HinhAnh,s.KhuyenMai,s.Mota, n.Ten as Tennhasx
                          from sanpham s 
                          LEFT JOIN nhasanxuat n on n.ID = s.Manhasx   ORDER BY s.Ten  ";
                          $result = $conn->query($sql); 

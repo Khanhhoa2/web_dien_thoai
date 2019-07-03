@@ -26,7 +26,7 @@ $name ="Điện thoai";
    require 'inc/myconnect.php';
    //lay san pham theo id
    $id = $_GET["id"];
-   $query="SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.giakhuyenmai,s.Mota, n.Ten as Tennhasx,s.Manhasx
+   $query="SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.Mota, n.Ten as Tennhasx,s.Manhasx
    from sanpham s 
    LEFT JOIN nhasanxuat n on n.ID = s.Manhasx
 	WHERE  s.id =".$id;
@@ -81,7 +81,7 @@ $row = $result->fetch_assoc();
                                  if($row["KhuyenMai"] == true)
 								 {                                      
 								?>
-									<div class="price"><?php echo $row["giakhuyenmai"]?>.000 VNĐ<span><?php echo $row["Gia"]?>.000 VNĐ</span></div>
+									<div><span><?php echo $row["Gia"]?>.000 VNĐ</span></div>
 								<?php 
 								}
 								?>

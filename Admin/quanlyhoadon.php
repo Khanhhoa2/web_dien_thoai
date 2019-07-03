@@ -85,9 +85,9 @@
                             echo $row["Trangthai"]; 
                           }?>
                          </td>
-                         <td><?php  $idBill=$row['id_bill_detail']; ?>
-                         <a href='function/capnhat_trangthai.php?id_bill_detail=<?php echo $idBill; ?>' >OK</a>
-                         <a href='function/huy_trangthai.php?id_bill_detail=<?php echo $idBill; ?>'>Cancel</a>
+                         <td><?php  $idBill=$row['sodh']; ?>
+                         <a href='function/capnhat_trangthai.php?id=<?php echo $idBill; ?>' >OK</a>
+                         <a href='function/huy_trangthai.php?id=<?php echo $idBill; ?>'>Cancel</a>
                        </td>
                         
                         </tr>

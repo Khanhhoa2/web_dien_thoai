@@ -18,7 +18,7 @@ ob_start();
    require '../inc/myconnect.php';
    //lay san pham theo id
    $id = $_GET["id"];
-   $query="SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.giakhuyenmai,s.Mota, n.Ten as Tennhasx,s.Manhasx
+   $query="SELECT s.ID,s.Ten,s.ngay,s.Gia,s.HinhAnh,s.Mota, n.Ten as Tennhasx,s.Manhasx
    from sanpham s 
    LEFT JOIN nhasanxuat n on n.ID = s.Manhasx
 	WHERE  s.id =".$id;
@@ -104,42 +104,12 @@ $row = $result->fetch_assoc();
                     <input type="text" class="form-control"  name="gia" required value="<?php echo $row["Gia"] ?>">
                     </div>
                     </div>
-                    <?php 
-                       if($row["KhuyenMai"]  == 1)
-                       {
-                    ?>
-                    <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label" >Khuyến mãi</label>
-                    <div class="col-sm-10">
-                    <select class="form-control select2" style="width: 100%;" name="khuyenmai">
-                    <option selected="selected" value="1">True</option>
-                    <option  value="0">False</option>
-                    </select>
-                    </div>
-                    </div>
-                    <?php
-                       }
-                     ?>
-                                  <?php 
-                       if($row["KhuyenMai"]  == 0)
-                       {
-                    ?>
-                    <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label" >Khuyến mãi</label>
-                    <div class="col-sm-10">
-                    <select class="form-control select2" style="width: 100%;" name="khuyenmai">
-                    <option selected="selected" value="0">False</option>
-                    <option  value="1">True</option>
-                    </select>
-                    </div>
-                    </div>
-                    <?php
-                       }
-                     ?>
+                    
+                    
                                     <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label" >Giá khuyến mãi</label>
+                    
                     <div class="col-sm-10">
-                    <input type="text" class="form-control"  name="giakhuyenmai" value="<?php echo $row["giakhuyenmai"] ?>">
+                   
                     </div>
                     </div>
 

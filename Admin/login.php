@@ -50,7 +50,7 @@ ob_start();
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                            		<p>Đăng nhập tài khoảng của người quản trị</p>
+                            		<p>Đăng nhập tài khoản của người quản trị</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-key"></i>
